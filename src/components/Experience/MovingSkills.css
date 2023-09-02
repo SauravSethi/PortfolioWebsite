@@ -1,0 +1,135 @@
+.moving-skills-container {
+  display: flex;
+  justify-content: center; /* Center-align items horizontally */
+  align-items: center; /* Center-align items vertically */
+  animation: moveSkills 15s linear infinite;
+}
+
+.moving-skill {
+  display: flex;
+   flex: 1;
+  height: 20vh;
+  border: 4px solid var(--color-primary);
+  align-items: center;
+  margin: 0 3px;
+  padding: 2px;
+  background-color: rgb(15, 10, 11);
+  color: white;
+  border-radius: 1.3rem;
+  font-size: 1.3rem; 
+  white-space: nowrap;
+}
+
+
+.moving-skill svg {
+  margin-right: 5px;
+}
+
+/* Icon-specific styles */
+.html-icon {
+  color: #E44D26; 
+  font-size: 2.5rem; 
+}
+
+.css-icon {
+  color: #264DE4; 
+  font-size: 2.5rem; 
+}
+
+.js-icon {
+  color: #F0DB4F; 
+  font-size: 2.5rem; 
+}
+
+.react-icon{
+  color: #510a8f;
+  font-size: 2.5rem;
+}
+.node-icon{
+  color: #68b031;
+  font-size: 2.5rem;
+}
+.mongo-icon{
+  color: #67e712;
+  font-size: 2.5rem;
+}
+.express-icon{
+  color: #5ada85;
+  font-size: 2.5rem;
+}
+
+.java-icon{
+  color: #0e7c66;
+  font-size: 2.5rem;
+}
+
+.sql-icon{
+  color: #8f4511;
+  font-size: 2.5rem;
+}
+
+.moving-skill:hover {
+  background-color: var(--color-bg-variant);
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+@keyframes moveSkills {
+  0% {
+    transform: translateX(-100%);
+  }
+  
+  100% {
+    transform: translateX(98%);
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .moving-skill {
+    padding: 0.5rem;
+    width: var(--container-width-md); 
+    height: 9vh; 
+    font-size: 2rem; 
+    border-width: 1px; 
+    margin-right: 2px; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .moving-skills-container {
+    display: flex;
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
+    gap: 0.5rem; /* Adjust the gap for better spacing */
+    animation: moveSkills 10s linear infinite; /* Adjust animation duration for smaller screens */
+  }
+
+  .moving-skill {
+    width: var(--container-width-sm);
+    height: 10vh;
+    font-size: 0.3rem;
+    border-width: 1px;
+    margin-right: 1px;
+    padding: 0.2rem; /* Add padding for better appearance */
+  }
+
+  /* Adjust the keyframes animation for center-aligning */
+  @keyframes moveSkills {
+    0% {
+      transform: translateX(50%); /* Start from center */
+    }
+
+    100% {
+      transform: translateX(-50%); /* Move to the center */
+    }
+  }
+}
+
+  
+
+
+
+
+
